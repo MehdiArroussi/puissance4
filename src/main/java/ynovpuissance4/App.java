@@ -1,7 +1,9 @@
-package ;
+package ynovpuissance4;
 
 
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 
 
@@ -14,70 +16,76 @@ import java.util.ArrayList;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        public static void StartGame() 
-    {
-        System.out.println("Welcome to Power 4 , the one and only !\n1. Play\n2. Rules\n3. Exit");
+    /**
+     * @param args
+     */
+    public static void main( String[] args ) throws Exception {
+        StartGame();
+    }
+    
+    public static Void StartGame() {
+        System.out.println("Welcome to the game Power 4!\n1. Play\n2. Rules\n3. Exit");
+        try {
+        InputStreamReader bis0 = new InputStreamReader(System.in);
+        BufferedReader br0 = new BufferedReader(bis0);
         String choice = br0.readLine();
         switch(choice.charAt(0)) {
             case '1' :
             System.out.println("You want to play , lets play ...");
+            InputStreamReader bis = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(bis);
             System.out.println("What mode do you want to play ?\n1. Local \n2. Server \n3. Client");
-            String mode = br0.readLine();
+            String mode = br.readLine();
                 switch(mode.charAt(0)) {
                     case '1' : 
                     System.out.println("Local !\n How many players ?\n1. 2 players \n2. 3 players");
-                    String nbplayers = br0.readLine();
-                        switch(players.charAt(0)) {
+                    String nbplayers = br.readLine();
+                        switch(nbplayers.charAt(0)) {
                             case '1' :
                             System.out.println("2 players !\n");
-                            Grid grid = new Grid(2);
-                            break;
+                            //local 2 players
+                             break;
                             case '2' :
                             System.out.println("3 players !\n");
-                            Grid grid2 = new Grid(3);
+                            //local 3 players
                             break;
                             default :
                             System.out.println("Wrong input !\n");
                             StartGame();
                             break;
                         }
-                    case "2" :
+                        break;
+                    case '2' :
                     System.out.println("Server !\n How many players ?\n1. 2 players \n2. 3 players");
-                    String nbplayers2 = br0.readLine();
+                    InputStreamReader bis2 = new InputStreamReader(System.in);
+                            BufferedReader br2 = new BufferedReader(bis2);
+                    String nbplayers2 = br2.readLine();
                         switch(nbplayers2.charAt(0)) {
                             case '1' :
                             System.out.println("2 players !\n");
-                            Grid grid = new Grid(2);
+                            // As a server , 2 players
                             break;
                             case '2' :
                             System.out.println("3 players !\n");
-                            Grid grid2 = new Grid(3);
+                            // As a server , 3 players
                             break;
                             default :
                             System.out.println("Wrong input !\n");
                             StartGame();
                             break;
                         }
-                    case "3" :
-                    System.out.println("Client !\n How many players ?\n1. 2 players \n2. 3 players");
-                    String nbplayers3 = br0.readLine();
-                        switch(nbplayers3.charAt(0)) {
-                            case '1' :
-                            System.out.println("2 players !\n");
-                            Grid grid = new Grid(2);
-                            break;
-                            case '2' :
-                            System.out.println("3 players !\n");
-                            Grid grid2 = new Grid(3);
-                            break;
+                        break;
+                    case '3' :
+                    System.out.println("Client !\n Looking for Players ...");
+                        //client launch here
+                          break;
                             default :
                             System.out.println("Wrong input !\n");
                             StartGame();
                             break;
                         }
-                }
+                        break;
+                
             case '2' :
             System.out.println("You dont know how to play this , do you ?\n Well , here are the rules : \n The purpose is to align 4 pawns of the same symbol in a row, a column or a diagonal. The First player to align 4 pawns wins the game. GL HF !");
             StartGame();
@@ -88,20 +96,25 @@ public class App
             break;
             default :
             StartGame();
+            break;
         }
-    
-
-
-
-
-
-
-
-
-
-
-
-
+        }catch(Exception e) {
+            System.out.println("Wrong input !\n" + e.toString());
+            StartGame();
+        }
+        return null;
     }
 }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+   

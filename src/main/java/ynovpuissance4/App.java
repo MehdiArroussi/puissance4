@@ -4,6 +4,7 @@ package ynovpuissance4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 
 
@@ -16,9 +17,7 @@ import java.io.InputStreamReader;
  */
 public class App 
 {
-    /**
-     * @param args
-     */
+    
     public static void main( String[] args ) throws Exception {
         StartGame();
     }
@@ -43,11 +42,13 @@ public class App
                         switch(nbplayers.charAt(0)) {
                             case '1' :
                             System.out.println("2 players !\n");
-                            //local 2 players
-                             break;
+                            Grid grid = new Grid(2);
+                            Display.printGrid(grid.grille);
+                            break;
                             case '2' :
                             System.out.println("3 players !\n");
-                            //local 3 players
+                            Grid grid2 = new Grid(3);
+                            Display.printGrid(grid2.grille);
                             break;
                             default :
                             System.out.println("Wrong input !\n");

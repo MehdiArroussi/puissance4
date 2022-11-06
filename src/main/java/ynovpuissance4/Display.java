@@ -20,16 +20,16 @@ public class Display {
             for (String caraString : list) {
                 switch (caraString) {
                     case "X" :
-                        System.out.print(">" + caraString + "<");
+                        System.out.print("├" + caraString + "┤");
                         continue;
                     case "O" : 
-                        System.out.print(">" + caraString + "<");
+                        System.out.print("├" + caraString + "┤");
                         continue;
                     case "V" :
-                        System.out.print(">" + caraString + "<");
+                        System.out.print("├" + caraString + "┤");
                         continue;
                     default : 
-                        System.out.print(">" + caraString + "<");
+                        System.out.print("├" + caraString + "┤");
                         continue;
                 }
             }
@@ -37,9 +37,9 @@ public class Display {
         }
         System.out.print("└"+ "┴".repeat((grid.get(0).size()*3)-2)+"┘"+"\n");
         if (grid.get(0).size() == 8) {
-            System.out.println(" A B C D E F G H ");
+            System.out.println(" A  B  C  D  E  F  G  H  ");
         }else {
-            System.out.println(" A B C D E F G H I J K L ");
+            System.out.println(" A  B  C  D  E  F  G  H  I  J  K  L  ");
         }
     }
 

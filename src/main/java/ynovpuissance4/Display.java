@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+
 
 public class Display {
     /**
@@ -13,9 +13,6 @@ public class Display {
      * @param grid the grid we wanna show
      */
      
-
-
-
     protected static void printGrid(ArrayList<ArrayList<String>> grid) {
         for (List<String> list : grid) {
             for (String caraString : list) {
@@ -81,73 +78,6 @@ public class Display {
         System.err.println("The column is full already, please choose another one");
         return TokenPos(Grid);                                                               // if the column is full, we ask again and reload method 
     }
-    
-    /**
-     * @param player this is the playing player
-     * @param index this is the index of the column where the token has been thrown
-     * @param Grid the Grid players are playing on
-     * This method puprpose is to add the token in the grid after the player has chosen a column where he wants to play. This meethod has a server/client approach.
-     */
-
-    /*public static void Turn(ArrayList<ArrayList<String>> Grid,String player, String indexString ) {
-        String letter = "abcdefghijkl";
-        int index = letter.indexOf(indexString);
-        for (int i = Grid.size()-1; i >= 0; i--) {
-            if (Grid.get(i).get(index) == " ") {
-                Grid.get(i).set(index, player);
-                return;
-        } 
-
-    } 
-    }*/
-
-
-    /**
-     *This Method have the purpose to have the next player playing after the current one. 
-     * @param playerNb the number of players concerned in the game
-     * @param player the current player playing.
-     * @return Next player playing.
-     */
-
-    public static Player NextPlayer(int playerNb,Player player) {
-        switch (player) {
-            case Player1:
-                return Player.Player2;
-            case Player2:
-                if (playerNb == 3) {
-                    return Player.Player3;
-                }
-                return Player.Player1;
-            case Player3:
-                return Player.Player1;
-        }
-        return NextPlayer(playerNb, player);
-}
-/*
- * This Method have the purpose of randomizing the first player playing in the game.
- */
-
-public static Player PlayerRandomizer(int playerNb) {
-    Random rnd = new Random();
-    int random = rnd.nextInt(playerNb);
-    System.out.println(random);
-    switch(random) {
-        case 0 : 
-            return Player.Player1;
-        case 1 :
-            return Player.Player2;
-        case 2 :
-            return Player.Player3;
-    }
-    return PlayerRandomizer(playerNb);
-}
-
-
-
-
-
-
-
 /*Those Methods are for the local part , we make 3 possibilities since we have a max of 3 players at a time */
 
 public static void TokenPosX(ArrayList<ArrayList<String>> Grid) {
@@ -252,7 +182,5 @@ public static void TokenPosV(ArrayList<ArrayList<String>> Grid) {
     System.err.println("The column is full! Put it somewhere else , pretty please !");
     TokenPosV(Grid);
     return; 
-}
-
-
+    }
 }

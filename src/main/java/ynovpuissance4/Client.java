@@ -51,6 +51,5 @@ public class Client {
         }
         String message = new String(bytes.array(),"UTF-8");
         return message;
-}
-    
     }
+}

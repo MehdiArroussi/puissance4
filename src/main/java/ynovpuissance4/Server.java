@@ -153,5 +153,5 @@ public static Player PlayerRandomizer(int playerNb) {
             return Player.Player3;
     }
     return PlayerRandomizer(playerNb);
-}
+    }
 }

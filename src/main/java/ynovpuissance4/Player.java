@@ -2,6 +2,7 @@ package ynovpuissance4;
 
 /**
  * This enum represents all the players available and playable in the game.
+ * @player the player's name
  */
 
 

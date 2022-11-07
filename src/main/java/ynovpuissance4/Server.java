@@ -82,6 +82,7 @@ public class Server {
     /**
      * This Method is for the online game, it sends a message to the Client.
      * @param message the message (type String) we wanna send to the Client.
+     * @param clientSocket the socket of the Client.
      */
     public static void broadcast(String message, SocketChannel clientSocket){
         try{

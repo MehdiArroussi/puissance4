@@ -13,8 +13,10 @@ import java.util.ArrayList;
 /**
  * This is the Menu app , it's the first thing you see when you launch the game. Display a Menu to select which mode , number of players , rules or exit the game
  *@author Mehdi ARROUSSI
- *
+ * !!! IMPORTANT : I've noticed a little bug in the code , when you play on local and you have 4 pawns aligned , the console ask to enter a column to play but when you do, the game stops and the winner is declared ==> you need to "finish" the next turn in order to check if their is a winner.
+ *  I tried to fix it but i couldnt , it doesnt have any consequence on the winning player orthe game since it doesnt add any more pawns  !!!
  */
+ 
 public class App 
 {
     
@@ -23,7 +25,7 @@ public class App
     }
     
     public static Void StartGame() {
-        System.out.println("Welcome to Osu! ... hmm Power 4 sorry !!!\n1. Play\n2. Rules\n3. Exit");
+        System.out.println("Welcome to Osu! ... Power 4 sorry !!!\n1. Play\n2. Rules\n3. Exit");
         try {
         InputStreamReader bis0 = new InputStreamReader(System.in);
         BufferedReader br0 = new BufferedReader(bis0);

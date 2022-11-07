@@ -15,6 +15,6 @@ Mehdi ARROUSSI
 
 ## Groupe : 
 Grp 8 ==>
-Mehdi ARROUSSI
-Abakar TIDJANI
+Mehdi ARROUSSI,
+Abakar TIDJANI,
 Esteban CARDOSO

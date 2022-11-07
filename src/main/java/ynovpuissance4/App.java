@@ -2,9 +2,8 @@ package ynovpuissance4;
 
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+
 
 
 
@@ -24,7 +23,7 @@ public class App
         StartGame();
     }
     
-    public static Void StartGame() {
+    public static Void StartGame() throws Exception {
         System.out.println("Welcome to Osu! ... Power 4 sorry !!!\n1. Play\n2. Rules\n3. Exit");
         try {
         InputStreamReader bis0 = new InputStreamReader(System.in);
@@ -96,11 +95,11 @@ public class App
                         switch(nbplayers2.charAt(0)) {
                             case '1' :
                             System.out.println("2 players !\n");
-                            Server.ServerLaunch();
+                            Server.LaunchServeur(2);
                             break;
                             case '2' :
                             System.out.println("3 players !\n");
-                            Server.LaunchServeur();
+                            Server.LaunchServeur(3);
                             break;
                             default :
                             System.out.println("Wrong input !\n");

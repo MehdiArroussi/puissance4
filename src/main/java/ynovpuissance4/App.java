@@ -96,11 +96,11 @@ public class App
                         switch(nbplayers2.charAt(0)) {
                             case '1' :
                             System.out.println("2 players !\n");
-                            // As a server , 2 players
+                            Server.ServerLaunch();
                             break;
                             case '2' :
                             System.out.println("3 players !\n");
-                            // As a server , 3 players
+                            Server.LaunchServeur();
                             break;
                             default :
                             System.out.println("Wrong input !\n");
@@ -110,7 +110,7 @@ public class App
                         break;
                     case '3' :
                     System.out.println("Client !\n Looking for Players ...");
-                        //client launch here
+                        Client.LaunchClient();
                           break;
                             default :
                             System.out.println("Wrong input !\n");
@@ -138,16 +138,3 @@ public class App
         return null;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-   

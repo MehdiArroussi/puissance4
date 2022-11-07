@@ -27,7 +27,7 @@ public class Conditions {
         for (int j = 0; j<Grid.size()-3 ; j++ ){
             for (int i = 0; i<Grid.get(0).size(); i++){
                 if (Grid.get(j).get(i).charAt(0) == Grid.get(j+1).get(i).charAt(0) && Grid.get(j+2).get(i).charAt(0) == Grid.get(j+1).get(i).charAt(0) && Grid.get(j+2).get(i).charAt(0) == Grid.get(j+3).get(i).charAt(0) && Grid.get(j).get(i).charAt(0) != ' ' ){
-                    System.out.println("The player " + Grid.get(j).get(i) + "has won ! Congrats !");
+                    System.out.println("The player " + Grid.get(j).get(i) + " has won ! Congrats !");
                     return true;
                 }           
             }
@@ -36,7 +36,7 @@ public class Conditions {
         for (int j = 0; j<Grid.get(0).size()-3 ; j++ ){
             for (int i = 0; i<Grid.size(); i++){
                 if (Grid.get(i).get(j).charAt(0) == Grid.get(i).get(j+1).charAt(0) && Grid.get(i).get(j+2).charAt(0) == Grid.get(i).get(j+1).charAt(0) && Grid.get(i).get(j+2).charAt(0) == Grid.get(i).get(j+3).charAt(0) && Grid.get(i).get(j).charAt(0) != ' '){
-                    System.out.println("The player " + Grid.get(j).get(i) + "has won ! Congrats !");
+                    System.out.println("The player " + Grid.get(j).get(i) + " has won ! Congrats !");
                     return true;
                 }           
             }
@@ -45,7 +45,7 @@ public class Conditions {
         for (int j = 3; j<Grid.get(0).size() ; j++ ){
             for (int i=0; i<Grid.size()-3; i++){
                 if (Grid.get(i).get(j).charAt(0) == Grid.get(i+1).get(j-1).charAt(0) && Grid.get(i+1).get(j-1).charAt(0) == Grid.get(i+2).get(j-2).charAt(0) && Grid.get(i+2).get(j-2).charAt(0) == Grid.get(i+3).get(j-3).charAt(0) && Grid.get(i).get(j).charAt(0) != ' ') {
-                    System.out.println("The player " + Grid.get(j).get(i) + "has won ! Congrats !");
+                    System.out.println("The player " + Grid.get(j).get(i) + " has won ! Congrats !");
                     return true;
                 }
             }
@@ -54,7 +54,7 @@ public class Conditions {
         for (int j = 3; j<Grid.get(0).size() ; j++ ){
             for (int i=3; i<Grid.size(); i++){
                 if (Grid.get(i).get(j).charAt(0) == Grid.get(i-1).get(j-1).charAt(0) && Grid.get(i-1).get(j-1).charAt(0) == Grid.get(i-2).get(j-2).charAt(0) && Grid.get(i-2).get(j-2).charAt(0) == Grid.get(i-3).get(j-3).charAt(0) && Grid.get(i).get(j).charAt(0) != ' ') {
-                    System.out.println("The player " + Grid.get(j).get(i) + "has won ! Congrats !");
+                    System.out.println("The player " + Grid.get(j).get(i) + " has won ! Congrats !");
                     return true;
                 }
             }

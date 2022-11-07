@@ -23,7 +23,7 @@ public class App
     }
     
     public static Void StartGame() {
-        System.out.println("Welcome to the game Power 4!\n1. Play\n2. Rules\n3. Exit");
+        System.out.println("Welcome to Osu! ... hmm Power 4 sorry !!!\n1. Play\n2. Rules\n3. Exit");
         try {
         InputStreamReader bis0 = new InputStreamReader(System.in);
         BufferedReader br0 = new BufferedReader(bis0);
@@ -43,12 +43,42 @@ public class App
                             case '1' :
                             System.out.println("2 players !\n");
                             Grid grid = new Grid(2);
-                            Display.printGrid(grid.grille);
+                            
+                            while (Conditions.Equal(grid.grille) == false) {
+                                Display.printGrid(grid.grille);
+                                System.out.print("Player X , It's your turn !\n");
+                                Display.TokenPosX(grid.grille);
+                                Display.printGrid(grid.grille);
+                                System.out.print("Player O , It's your turn !\n");
+                                Display.TokenPosO(grid.grille);
+                                if (Conditions.Win(grid.grille) == false) {
+                                    continue;
+                                }
+                                else {
+                                    break;
+                                }
+                            }
                             break;
                             case '2' :
                             System.out.println("3 players !\n");
                             Grid grid2 = new Grid(3);
-                            Display.printGrid(grid2.grille);
+                            while (Conditions.Equal(grid2.grille) == false) {
+                                Display.printGrid(grid2.grille);
+                                System.out.print("Player X , It's your turn !\n");
+                                Display.TokenPosX(grid2.grille);
+                                Display.printGrid(grid2.grille);
+                                System.out.print("Player O , It's your turn !\n");
+                                Display.TokenPosO(grid2.grille);
+                                Display.printGrid(grid2.grille);
+                                System.out.print("Player V , It's your turn !\n");
+                                Display.TokenPosV(grid2.grille);
+                                if (Conditions.Win(grid2.grille) == false) {
+                                    continue;
+                                }
+                                else {
+                                    break;
+                                }
+                            }
                             break;
                             default :
                             System.out.println("Wrong input !\n");

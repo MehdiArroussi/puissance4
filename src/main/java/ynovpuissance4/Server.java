@@ -93,18 +93,7 @@ public class Server {
             System.err.println(e.toString());
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-    
+ 
     /**
      * @param player this is the playing player
      * @param index this is the index of the column where the token has been thrown
